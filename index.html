@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html manifest="manifest.php">
+<head>
+    <title>LIMO Géoloc</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <style>
+    * { padding:0;margin:0; }
+    html, body, #map-canvas {
+        height: 100%;
+    }
+    body {font-family:arial;font-size:1em;background-color:#dedede;}
+    h1 {background-color:#fff;}
+    #header {text-align:center;}
+    #header span {display:inline-block;padding:5px;}
+    #time {color:purple;}
+    #latitude {color:red;}
+    #longitude {color:orange;}
+    #vitesse {color:green;}
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="mapapi.js"></script>
+    <script src="geoloc.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1><img src="logo.png" /></h1>
+        <div ng-app="MyApp">
+            <div ng-controller="MainCtrl">
+              <div ng-show="position">        
+                <span id="time">Rafraichissment : {{ position.timestamp|date:'h:mm:ssa' }}</span>
+                <span id="latitude">Latitude : {{ position.coords.latitude }}</span>
+                <span id="longitude">Longitude : {{ position.coords.longitude }}</span>
+                <span id="vitesse">Vitesse : {{ position.coords.speed*1 }}</span>
+              </div>
+              <div ng-hide="position">
+                <p>{{ message }}</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div id="map-canvas">
+    </div>
+</body>
+</html>
