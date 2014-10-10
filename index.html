@@ -22,6 +22,15 @@
     <script src="angular.min.js"></script>
     <script src="mapapi.js"></script>
     <script src="geoloc.js"></script>
+    <script>
+        $(document).ready(function(){
+            window.plugins.insomnia.keepAwake(function(){
+                alert('Insomnia OK !');
+            }, function(){
+                alert('Erreur Insomnia');
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="header">
@@ -39,8 +48,6 @@
               </div>
             </div>
         </div>
-        <button onclick="window.plugins.insomnia.keepAwake()">keep awake</button>
-        <button onclick="window.plugins.insomnia.allowSleepAgain()">allow sleep again</button>
     </div>
     <div id="map-canvas">
     </div>
