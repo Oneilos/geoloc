@@ -1,7 +1,7 @@
 <widget id="fr.limo-vtc.geoloc" version="0.0.1"> 
     <name>LIMO - GEOLOC</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Application de géolocation du logiciel LIMO.
     </description>
     <author email="nicolas@agwc.fr" href="http://www.limo-vtc.fr/">
         Agence web conseil - LIMO
