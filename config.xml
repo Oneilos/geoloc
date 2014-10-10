@@ -1,7 +1,11 @@
-<widget id="fr.limo-vtc.geoloc" version="0.0.1"> 
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "fr.limo-vtc.geoloc" 
+    version     = "0.0.1"> 
     <name>LIMO - GEOLOC</name>
     <description>
-        Application de géolocation du logiciel LIMO.
+        Application de geolocation du logiciel LIMO.
     </description>
     <author email="nicolas@agwc.fr" href="http://www.limo-vtc.fr/">
         Agence web conseil - LIMO
